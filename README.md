@@ -8,7 +8,7 @@ Now you will put your new skills to use with a large end-of-Phase project! This 
 
 ## Project Overview
 
-For this project, you will use exploratory data analysis to generate insights for a business stakeholder.
+
 
 ### Business Problem
 
