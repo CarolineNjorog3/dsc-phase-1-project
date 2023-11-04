@@ -1,65 +1,50 @@
-# Phase 1 Project
-
-You've made it all the way through the first phase of this course - take a minute to celebrate your awesomeness!
-
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-1-project/master/awesome.gif)
-
-Now you will put your new skills to use with a large end-of-Phase project! This project should take 20 to 30 hours to complete.
-
+# <span style="color: orange;">  Microsoft's Movie Studio Exploration : From Data Driven To Silver Screen.</span>
+**Author** : [Caroline Njeri Njoroge](mailto: njericarol96@gmail.com)
 ## Project Overview
-
-
+In a rapidly evolving entertainment landscape, Microsoft is embarking on a bold venture by establishing a new movie studio. The success of this venture hinges on understanding the intricate nuances of the film industry, from market trends to audience preferences. The primary objective of this project is to analyze and leverage movie data effectively to inform decision-making at Microsoft's movie studio. 
 
 ### Business Problem
+The business problem at hand revolves around Microsoft's venture into the entertainment industry by establishing a new movie studio.
+Microsoft faces several challenges and the pain points in this venture, include:
+* Understanding Market Dynamics.
+* Audience Preferences.
+* Financial Success.
+* Optimal Release Timing.
+* Highly Rated and Popular Movies.
+* Language Diversity.
+* Budget vs Performance.
+By addressing these questions, Microsoft will be better equipped to navigate the complexities of the film industry, produce successful movies, and maximize profitability while providing an enriching cinematic experience to their audience.
 
-Microsoft sees all the big companies creating original video content and they want to get in on the fun. They have decided to create a new movie studio, but they don’t know anything about creating movies. You are charged with exploring what types of films are currently doing the best at the box office. You must then translate those findings into actionable insights that the head of Microsoft's new movie studio can use to help decide what type of films to create.
+### Data Understanding.
+The data used for this project were collected from various reputable sources:
+* Box Office Performance: Records of box office earnings for a range of movies.
+* Genre Trends: Data on the popularity and trending genres over time.
+* Audience Preference: Information about the number of people who voted.
+* Market Opportunities: Insights into emerging market niches and potential partnerships.
+The datasets cover thousands of movies, providing a substantial and diverse sample. The time period covered varies across datasets, with information spanning from historical records to more recent data.
+The variables used in this analysis have diverse properties, including numerical, categorical, and ordinal data. Some of the key variables include:
+* Movie Title: The title of each film.
+* Genre: The genre(s) of the movie.
+* Release Date: The date when the movie was released.
+* Audience Preference Language: Variables describing the languages the audience prefers.
+* Critical Reception: Variables related to ratings and popularity.
+* Market Opportunities: Variables associated with emerging market trends and partnership possibilities.
+These properties are critical for understanding and analyzing the dataset effectively and for addressing the data analysis questions. This information is essential for framing the context and scope of the subsequent data analysis.
 
-### The Data
+### Data Preparation.
+In the process of data preparation, several variables were handled to ensure the dataset's suitability for analysis:
+#### Variables Handling:
+** Dropping Non-Significant Columns: In the 'tmdbmovies' dataset, we removed non-significant columns ('Unnamed: 0' and 'title') using the drop() method. These columns were irrelevant to the specific analysis questions. This choice was appropriate to streamline the dataset and eliminate unnecessary data that wouldn't contribute to the analysis.
 
-In the folder `zippedData` are movie datasets from:
+** Cleaning Financial Data: In the 'moviebudget' dataset, we addressed missing values and ensured consistency in the format of financial data. Specifically:
 
-* [Box Office Mojo](https://www.boxofficemojo.com/)
-* [IMDB](https://www.imdb.com/)
-* [Rotten Tomatoes](https://www.rottentomatoes.com/)
-* [TheMovieDB](https://www.themoviedb.org/)
-* [The Numbers](https://www.the-numbers.com/)
+** Removing Commas and Dollar Signs: We removed commas and dollar signs from columns ('production_budget,' 'domestic_gross,' and 'worldwide_gross') to make these values suitable for financial calculations. This was essential to ensure the data's integrity and consistency.
+** Converting 'release_date' to Datetime Format: We converted the 'release_date' column to a datetime format using the pd.to_datetime() function. This was crucial to standardize the date format for analysis.
+#### Handling Missing Values:
+To address missing values, the following steps were taken:
 
-It is up to you to decide what data from this to use and how to use it. If you want to make this more challenging, you can scrape websites or make API calls to get additional data. If you are feeling overwhelmed or behind (e.g. struggled with the Phase 1 Code Challenge), we recommend you use only the following data files:
+** Dropping Rows with Missing Values: In the 'boxmovies' dataset, rows with missing values in the 'domestic_gross' and 'foreign_gross' columns were removed using the dropna() method. This step ensured that complete financial data was available for analysis.
+**Dropping Rows with Missing Studio Information: In the 'boxmovies' dataset, rows with missing values in the 'studio' column were removed to guarantee information about movie studios was available.
+** Resetting Index: After removing rows with missing values, the index of the DataFrame was reset using the reset_index() method to maintain data integrity.
+** Handling Missing Data in IMDb Dataframes: No specific steps for handling missing data in IMDb-related datasets were mentioned. Depending on the nature and extent of missing data, additional data cleaning and preprocessing could be performed as needed.
 
-* imdb.title.basics
-* imdb.title.ratings
-* bom.movie_gross
-
-## Deliverables
-
-There are three deliverables for this project:
-
-* A **GitHub repository**
-* A **Jupyter Notebook**
-* A **non-technical presentation**
-
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic for instructions on creating and submitting your deliverables. Refer to the rubric associated with this assignment for specifications describing high-quality deliverables.
-
-### Key Points
-
-* **Your analysis should yield three concrete business recommendations.** The ultimate purpose of exploratory analysis is not just to learn about the data, but to help an organization perform better. Explicitly relate your findings to business needs by recommending actions that you think the business (Microsoft) should take.
-
-* **Communicating about your work well is extremely important.** Your ability to provide value to an organization - or to land a job there - is directly reliant on your ability to communicate with them about what you have done and why it is valuable. Create a storyline your audience (the head of Microsoft's new movie studio) can follow by walking them through the steps of your process, highlighting the most important points and skipping over the rest.
-
-* **Use plenty of visualizations.** Visualizations are invaluable for exploring your data and making your findings accessible to a non-technical audience. Spotlight visuals in your presentation, but only ones that relate directly to your recommendations. Simple visuals are usually best (e.g. bar charts and line graphs), and don't forget to format them well (e.g. labels, titles).
-
-## Getting Started
-
-Please start by reviewing this assignment, the rubric at the bottom of it, and the "Project Submission & Review" page. If you have any questions, please ask your instructor ASAP.
-
-Next, we recommend you check out [the Phase 1 Project Templates and Examples repo](https://github.com/learn-co-curriculum/dsc-project-template) and use the MVP template for your project.
-
-Alternatively, you can fork [the Phase 1 Project Repository](https://github.com/learn-co-curriculum/dsc-phase-1-project), clone it locally, and work in the `student.ipynb` file. Make sure to also add and commit a PDF of your presentation to your repository with a file name of `presentation.pdf`.
-
-## Project Submission and Review
-
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic to learn how to submit your project and how it will be reviewed. Your project must pass review for you to progress to the next Phase.
-
-## Summary
-
-This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
