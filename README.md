@@ -1,5 +1,8 @@
 # <span style="color: orange;">  Microsoft's Movie Studio Exploration : From Data Driven To Silver Screen.</span>
 **Author** : [Caroline Njeri Njoroge](mailto: njericarol96@gmail.com)
+**Github Repository:** https://github.com/CarolineNjorog3/dsc-phase-1-project
+**Files and Folders:**
+* Zipped Data.
 ## Project Overview
 In a rapidly evolving entertainment landscape, Microsoft is embarking on a bold venture by establishing a new movie studio. The success of this venture hinges on understanding the intricate nuances of the film industry, from market trends to audience preferences. The primary objective of this project is to analyze and leverage movie data effectively to inform decision-making at Microsoft's movie studio. 
 
